@@ -1,7 +1,7 @@
 /* importar tipografía externa desde google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
-/* tipografía para todos los elementos */
+/* tipografía para todos los elementos, se mantiene sobre Bulma */
 * {
     font-family: 'Merriweather', serif;
 }
@@ -13,140 +13,143 @@ body {
     padding: 0;
 }
 
-section {
-    /* Al quitar el width: 100%, el navegador calcula: ancho disponible - padding */
-    margin: 20px 0; 
-    padding: 0 20px;
-    display: block; 
+/* --- SECCIÓN SUPERIOR DE AVISOS --- */
+/* Requerimiento: barra de avisos en la parte superior */
+.aviso-barra {
+    background-color: #31231e;
+    color: white;
+    text-align: center;
+    padding: 8px 20px;
+    font-size: 0.85rem;
 }
 
-/* técnica avanzada Flexbox para el header */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+/* --- HEADER --- */
+/* Nueva estética con color oscuro */
+.faro-header {
+    background-color: #31231e;
+    color: white;
+    padding: 30px 20px;
 }
 
-/* técnica flexbox para el nav */
-nav ul {
-    display: flex;
-    flex-direction: row;
+/* título principal en blanco sobre fondo oscuro */
+.faro-titulo {
+    color: white !important;
+    font-size: 2.5rem;
+}
+
+/* Requerimiento 1 semana 4: estilo del reloj */
+.faro-reloj {
+    font-size: 0.85rem;
+    color: #c9d2d0;
+    margin-top: 8px;
+}
+
+/* --- NAVBAR --- */
+/* nav con color propio manteniendo coherencia visual */
+.faro-nav {
+    background-color: #c9d2d0 !important;
     justify-content: center;
-    gap: 40px;
-    list-style: none;
-    padding: 10px;
+}
+
+.faro-nav .navbar-item,
+.faro-nav .navbar-link {
+    color: #31231e !important;
+    font-weight: bold;
+}
+
+.faro-nav .navbar-item:hover,
+.faro-nav .navbar-link:hover {
+    background-color: #31231e !important;
+    color: white !important;
+}
+
+.faro-nav .navbar-dropdown {
     background-color: #c9d2d0;
 }
 
-/* técnica avanzada grid para mostrar noticias en bloques */
-/* auto-fit hace que las columnas se adapten solas a cualquier tamaño de pantalla */
-table {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 20px;
-    width: 100%;
+.faro-nav .navbar-dropdown .navbar-item:hover {
+    background-color: #31231e !important;
+    color: white !important;
 }
 
-/* display contents hace que el tr sea ignorado y los td actúen como bloques del grid */
-tr {
-    display: contents;
+/* --- SUBTÍTULOS DE SECCIÓN --- */
+.faro-subtitulo {
+    color: #31231e;
+    border-bottom: 2px solid #c9d2d0;
+    padding-bottom: 8px;
+    margin-bottom: 20px !important;
 }
 
-/* fondo blanco en cada noticia con borde, cumple punto 2 */
-td {
+/* --- ARTÍCULO DESTACADO --- */
+/* Requerimiento: artículo más reciente destacado con tarjeta grande */
+.faro-card-destacada {
+    border-left: 6px solid #31231e;
     background-color: white;
-    padding: 20px;
-    border: 1px solid #ddd;
 }
 
-/* Hover: fondo negro y letra blanca */
-td:hover {
+/* --- TARJETAS DE ARTÍCULOS (columnas Bulma) --- */
+/* Requerimiento: artículos más chicos en columnas */
+.faro-card-articulo {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    height: 100%;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* hover igual al td original */
+.faro-card-articulo:hover {
     background-color: black;
     color: white;
 }
 
-/* Estilo del footer */
-footer {
-    background-color: #c9d2d0;
-    color: #31231e;
-    padding: 20px;
-    text-align: center;
-    margin-top: 30px;
-}
-
-/* Vínculos con subrayado normal */
-a {
-    text-decoration: underline;
-}
-
-/* hover en vínculos: negrita y sin subrayado, cumple */
-a:hover {
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/* --- ESTILOS NUEVOS --- */
-
-/* estilo del reloj en el header */
-#reloj {
-    font-size: 0.85rem;
-    color: #31231e;
-    margin-top: 8px;
-}
-
-/* estilo de los contadores de artículos */
-#contador-general,
-#contador-deporte,
-#contador-negocios {
+/* --- CONTADORES DE ARTÍCULOS --- */
+/* Requerimiento 4 semana 4 */
+.faro-contador {
     font-size: 0.85rem;
     color: #31231e;
     margin-bottom: 10px;
 }
 
-/* caja contenedora de los formularios
-   mantiene el mismo fondo blanco y borde que los td de noticias */
-.formulario-box {
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ddd;
+/* --- BOTONES --- */
+/* botones con paleta de colores del sitio */
+.faro-boton {
+    background-color: #c9d2d0 !important;
+    color: #31231e !important;
+    border: none !important;
+    font-family: 'Merriweather', serif !important;
 }
 
-/* campos de texto, textarea y select de los formularios
-   se adaptan al ancho disponible igual que las tablas */
-.formulario-box input,
-.formulario-box textarea,
-.formulario-box select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 4px;
-    margin-bottom: 12px;
-    border: 1px solid #ddd;
-    font-family: 'Merriweather', serif;
-    box-sizing: border-box;
+.faro-boton:hover {
+    background-color: #31231e !important;
+    color: white !important;
 }
 
-/* botones de los formularios
-   usan el mismo color del nav y footer para mantener coherencia visual */
-.formulario-box button {
-    background-color: #c9d2d0;
-    color: #31231e;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-family: 'Merriweather', serif;
+/* --- FOOTER MÁS GRANDE --- */
+/* Requerimiento: footer más grande con Bulma footer class */
+.faro-footer {
+    background-color: #31231e !important;
+    color: #c9d2d0 !important;
+    padding: 60px 20px !important;
 }
 
-/* hover en botones igual que el hover de los td */
-.formulario-box button:hover {
-    background-color: black;
-    color: white;
+.faro-footer a {
+    color: #c9d2d0 !important;
+    text-decoration: underline;
 }
 
-/* párrafo de confirmación del formulario de contacto */
-#contacto-respuesta {
-    margin-top: 12px;
-    color: #31231e;
-    font-size: 0.9rem;
+.faro-footer a:hover {
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* --- VÍNCULOS GENERALES --- */
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    font-weight: bold;
+    text-decoration: none;
 }
