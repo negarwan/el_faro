@@ -1,7 +1,7 @@
 /* importar tipografía externa desde google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
 
-/* tipografía para todos los elementos, se mantiene sobre Bulma */
+/* tipografía para todos los elementos se mantiene sobre Bulma */
 * {
     font-family: 'Merriweather', serif;
 }
@@ -126,7 +126,7 @@ body {
 }
 
 /* --- FOOTER MÁS GRANDE --- */
-/* Requerimiento: footer más grande con Bulma footer class */
+/* footer más grande con Bulma footer class */
 .faro-footer {
     background-color: #31231e !important;
     color: #c9d2d0 !important;

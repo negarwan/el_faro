@@ -1,6 +1,6 @@
-// ==========================================
+
 // REQUERIMIENTO 1: RELOJ EN VIVO
-// ==========================================
+
 
 function actualizarReloj() {
     const ahora = new Date();
@@ -21,9 +21,9 @@ actualizarReloj();
 setInterval(actualizarReloj, 1000);
 
 
-// ==========================================
+
 // REQUERIMIENTO 2: ARTÍCULOS DINÁMICOS
-// ==========================================
+
 
 let articulosGeneral = [
     {
@@ -80,10 +80,10 @@ let articulosNegocios = [
 ];
 
 
-// ==========================================
+
 // REQUERIMIENTO: ARTÍCULO DESTACADO
 // muestra el artículo más reciente de general en la tarjeta grande
-// ==========================================
+
 
 function actualizarDestacado() {
     // toma el último artículo agregado al arreglo general
@@ -94,10 +94,10 @@ function actualizarDestacado() {
 }
 
 
-// ==========================================
-// REQUERIMIENTO 2 + 4: RENDERIZAR ARTÍCULOS Y CONTADOR
+
+// RENDERIZAR ARTÍCULOS Y CONTADOR
 // ahora usa columnas Bulma en lugar de tablas para nueva estética
-// ==========================================
+
 
 function renderizarArticulos(arreglo, idContenedor, idContador) {
     const contenedor = document.getElementById(idContenedor);
@@ -125,7 +125,7 @@ function renderizarArticulos(arreglo, idContenedor, idContador) {
         contenedor.appendChild(columna);
     }
 
-    // Requerimiento 4: actualiza el contador con cantidad actual
+    // actualiza el contador con cantidad actual
     contador.textContent = 'Artículos en esta sección: ' + arreglo.length;
 }
 
@@ -138,9 +138,9 @@ renderizarArticulos(articulosNegocios, 'tabla-negocios', 'contador-negocios');
 actualizarDestacado();
 
 
-// ==========================================
+
 // REQUERIMIENTO 2: AGREGAR NUEVO ARTÍCULO
-// ==========================================
+
 
 function agregarArticulo() {
     const titulo = document.getElementById('nuevo-titulo').value;
@@ -177,9 +177,9 @@ function agregarArticulo() {
 }
 
 
-// ==========================================
+
 // REQUERIMIENTO 3: FORMULARIO DE CONTACTO
-// ==========================================
+
 
 function enviarContacto() {
     const nombre = document.getElementById('contacto-nombre').value;
